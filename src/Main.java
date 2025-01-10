@@ -3,16 +3,15 @@
 public class Main {
     public static void main(String[] args) throws InterruptedException {
         int[][] map = new int[][]{
-                {0, -1, 0, -1, 0, -1},
-                {0, -1, 0, -1, 0, 0},
-                {0, -1, 0, 0, -1, 0},
-                {0, -1, 0, -1, 0, 0},
-                {-1, 0, -1, 0, 0, -1},
-                {0, 0, 0, -1, 0, 3},
+                {0, 0,  0, 0, 0},
+                {0, -10, -10, 0, 0},
+                {0, 0, -10, 0, 0},
+                {0, -10, 1, -10, 0},
+                {0, -10, 0, 0, 0}
         };
 
         Bellman bellman = new Bellman(map, -1, 0.9);
 
-        bellman.valueIteration();
+        bellman.policyIteration();
     }
 }
